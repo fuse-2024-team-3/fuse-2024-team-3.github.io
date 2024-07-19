@@ -20,6 +20,10 @@ jobs:
       run: npm ci
     - name: Build
       run: npm run build
+    - name: Duplicate Index as 404
+      run: |
+        cd dist
+        cp index.html 404.html
     - name: Init Repo and Commit
       run: |
         cd dist
